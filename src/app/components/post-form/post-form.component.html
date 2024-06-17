@@ -1,0 +1,14 @@
+<button (click)="toggleDisplay()">Toggle Post</button>
+
+@if (display) {
+    <div>
+        <h1>Add Post</h1>
+        <h3>Title</h3>
+        <input type="text" [(ngModel)]="formPost.title"/>
+
+        <h3>Thought</h3>
+        <input type="text" [(ngModel)]="formPost.thought"/>
+
+        <button (click)="submitPost()">Add</button>
+    </div>
+}

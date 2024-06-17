@@ -1,0 +1,6 @@
+<app-post-form (Submitted)="onSubmit($event)"></app-post-form>
+<h1>Posts</h1>
+
+@for (p of allPosts.reverse(); track $index) {
+    <app-single-post (Deleted)="deletePost($event)" [post]="p"></app-single-post>
+}
